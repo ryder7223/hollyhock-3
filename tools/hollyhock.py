@@ -12,6 +12,9 @@ def parse_args():
     subparsers = parser.add_subparsers(title='command')
     subparsers.required = True
     subparsers.dest = 'command'
+    
+    # ---------------------------------------------------------------------
+    # Extract
 
     parser_extract = subparsers.add_parser(
         'extract',
@@ -30,6 +33,9 @@ def parse_args():
         'fw3070_path',
         help='Path to save the extracted 3070 image to.'
     )
+    
+    # ---------------------------------------------------------------------
+    # Patch
 
     parser_patch = subparsers.add_parser(
         'patch',
@@ -49,6 +55,9 @@ def parse_args():
         help='Path to save the patched 3070 firmware image to.'
     )
 
+    # ---------------------------------------------------------------------
+    # Pack
+
     parser_pack = subparsers.add_parser(
         'pack',
         description='Pack a modified firmware image ready to be embedded in an OSupdateDLL.dll file.'
@@ -66,6 +75,10 @@ def parse_args():
         'dll_path',
         help='Path to the DLL which the packed image will be embedded in (will not be modified).'
     )
+
+    # ---------------------------------------------------------------------
+    # Addresses
+
     parser_addresses = subparsers.add_parser(
         'addresses',
         description='Calculate/Search for address offsets(in file and Memory)'

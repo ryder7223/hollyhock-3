@@ -1,0 +1,316 @@
+{
+    "isInMemory": false,
+    "addresses": [
+      {
+        "FunctionName": "LCD_VRAMBackup",
+        "startAddress": "0x8002d3e2",
+        "endAddress": "0x8002d400"
+      },
+      {
+        "FunctionName": "LCD_VRAMRestore",
+        "startAddress": "0x8002d402",
+        "endAddress": "0x8002d420"
+      },
+      {
+        "FunctionName": "Debug_PrintString",
+        "startAddress": "0x8002d9f4",
+        "endAddress": "0x8002dace"
+      },
+      {
+        "FunctionName": "Debug_Printf",
+        "startAddress": "0x8002dbb0",
+        "endAddress": "0x8002dc0c"
+      },
+      {
+        "FunctionName": "LCD_GetSize",
+        "startAddress": "0x8002e128",
+        "endAddress": "0x8002e132"
+      },
+      {
+        "FunctionName": "LCD_GetVRAMAddress",
+        "startAddress": "0x8002e13c",
+        "endAddress": "0x8002e140"
+      },
+      {
+        "FunctionName": "Debug_SetCursorPosition",
+        "startAddress": "0x8002e418",
+        "endAddress": "0x8002e426"
+      },
+      {
+        "FunctionName": "Debug_GetCursorPosition",
+        "startAddress": "0x8002e430",
+        "endAddress": "0x8002e442"
+      },
+      {
+        "FunctionName": "LCD_Refresh",
+        "startAddress": "0x800373ac",
+        "endAddress": "0x8003737a"
+      },
+      {
+        "FunctionName": "LCD_SetPixel",
+        "startAddress": "0x80039d2a",
+        "endAddress": "0x80039d40"
+      },
+      {
+        "FunctionName": "LCD_SetPixelFromPalette",
+        "startAddress": "0x80039d42",
+        "endAddress": "0x80039d4e"
+      },
+      {
+        "FunctionName": "LCD_GetPixel",
+        "startAddress": "0x80039d50",
+        "endAddress": "0x80039d64"
+      },
+      {
+        "FunctionName": "LCD_ClearScreen",
+        "startAddress": "0x80039f0c",
+        "endAddress": "0x80039f16"
+      },
+      {
+        "FunctionName": "mkdir",
+        "startAddress": "0x80058314",
+        "endAddress": "0x80058352"
+      },
+      {
+        "FunctionName": "open",
+        "startAddress": "0x80058354",
+        "endAddress": "0x800583a0"
+      },
+      {
+        "FunctionName": "read",
+        "startAddress": "0x800583a2",
+        "endAddress": "0x800583d8"
+      },
+      {
+        "FunctionName": "write",
+        "startAddress": "0x800583da",
+        "endAddress": "0x80058410"
+      },
+      {
+        "FunctionName": "close",
+        "startAddress": "0x80058412",
+        "endAddress": "0x8005844c"
+      },
+      {
+        "FunctionName": "remove",
+        "startAddress": "0x8005844e",
+        "endAddress": "0x8005848c"
+      },
+      {
+        "FunctionName": "fstat",
+        "startAddress": "0x8005848e",
+        "endAddress": "0x800584c0"
+      },
+      {
+        "FunctionName": "stat",
+        "startAddress": "0x800584c2",
+        "endAddress": "0x80058504"
+      },
+      {
+        "FunctionName": "rename",
+        "startAddress": "0x80058506",
+        "endAddress": "0x80058594"
+      },
+      {
+        "FunctionName": "lseek",
+        "startAddress": "0x80058596",
+        "endAddress": "0x800585d8"
+      },
+      {
+        "FunctionName": "getAddr",
+        "startAddress": "0x8005876a",
+        "endAddress": "0x800587a4"
+      },
+      {
+        "FunctionName": "findFirst",
+        "startAddress": "0x8005adac",
+        "endAddress": "0x8005b0ee"
+      },
+      {
+        "FunctionName": "findNext",
+        "startAddress": "0x8005b0f0",
+        "endAddress": "0x8005b3b8"
+      },
+      {
+        "FunctionName": "findClose",
+        "startAddress": "0x8005b3ba",
+        "endAddress": "0x8005b438"
+      },
+      {
+        "FunctionName": "PrintStandardErrorString",
+        "startAddress": "0x8006658c",
+        "endAddress": "0x80066740"
+      },
+      {
+        "FunctionName": "Input_GetKeyState",
+        "startAddress": "0x800708b0",
+        "endAddress": "0x80070964"
+      },
+      {
+        "FunctionName": "Input_IsAnyKeyDown",
+        "startAddress": "0x80070b1c",
+        "endAddress": "0x80070b24"
+      },
+      {
+        "FunctionName": "MCS_CreateFolder",
+        "startAddress": "0x800774d8",
+        "endAddress": "0x80077566"
+      },
+      {
+        "FunctionName": "MCS_GetVariable",
+        "startAddress": "0x800776be",
+        "endAddress": "0x8007775a"
+      },
+      {
+        "FunctionName": "MCS_SetVariable",
+        "startAddress": "0x8007775c",
+        "endAddress": "0x80077c3a"
+      },
+      {
+        "FunctionName": "GetInput",
+        "startAddress": "0x8007da68",
+        "endAddress": "0x8007db4c"
+      },
+      {
+        "FunctionName": "Debug_WaitKey",
+        "startAddress": "0x8009521c",
+        "endAddress": "0x800952ca"
+      },
+      {
+        "FunctionName": "Debug_PrintNumberHex_Nibble",
+        "startAddress": "0x80095416",
+        "endAddress": "0x8009544e"
+      },
+      {
+        "FunctionName": "Debug_PrintNumberHex_Byte",
+        "startAddress": "0x80095450",
+        "endAddress": "0x80095476"
+      },
+      {
+        "FunctionName": "Debug_PrintNumberHex_Word",
+        "startAddress": "0x80095478",
+        "endAddress": "0x800954c2"
+      },
+      {
+        "FunctionName": "Debug_PrintNumberHex_Dword",
+        "startAddress": "0x800954c4",
+        "endAddress": "0x800954de"
+      },
+      {
+        "FunctionName": "free",
+        "startAddress": "0x800a86ac",
+        "endAddress": "0x800a873e"
+      },
+      {
+        "FunctionName": "memcpy",
+        "startAddress": "0x8000d6a8",
+        "endAddress": "0x8000d6dc"
+      },
+      {
+        "FunctionName": "memset",
+        "startAddress": "0x800a8f70",
+        "endAddress": "0x800a8ff4"
+      },
+      {
+        "FunctionName": "strcat",
+        "startAddress": "0x800a9080",
+        "endAddress": "0x800a90a4"
+      },
+      {
+        "FunctionName": "strchr",
+        "startAddress": "0x800a90a8",
+        "endAddress": "0x800a90be"
+      },
+      {
+        "FunctionName": "strcpy",
+        "startAddress": "0x8000d80c",
+        "endAddress": "0x8000d812"
+      },
+      {
+        "FunctionName": "strlen",
+        "startAddress": "0x800a90d8",
+        "endAddress": "0x800a912a"
+      },
+      {
+        "FunctionName": "strcmp",
+        "startAddress": "0x800ac7b2",
+        "endAddress": "0x800ac94a"
+      },
+      {
+        "FunctionName": "GUI_DisplayMessageBox_Internal",
+        "startAddress": "0x800b88e4",
+        "endAddress": "0x800b894e"
+      },
+      {
+        "FunctionName": "malloc",
+        "startAddress": "0x800d0ad8",
+        "endAddress": "0x800d0b2e"
+      },
+      {
+        "FunctionName": "GUIDialog_ctor",
+        "startAddress": "0x800d67ce",
+        "endAddress": "0x800d68aa"
+      },
+      {
+        "FunctionName": "GUIButton_ctor",
+        "startAddress": "0x800f94ce",
+        "endAddress": "0x800f9596"
+      },
+      {
+        "FunctionName": "GUIRadioButton_ctor",
+        "startAddress": "0x800fa93c",
+        "endAddress": "0x800faa8a"
+      },
+      {
+        "FunctionName": "GUIDropDownMenuItem_ctor",
+        "startAddress": "0x800fbb10",
+        "endAddress": "0x800fbbbe"
+      },
+      {
+        "FunctionName": "GUIDropDownMenu_ctor",
+        "startAddress": "0x800fce82",
+        "endAddress": "0x800fceca"
+      },
+      {
+        "FunctionName": "GUILabel_ctor",
+        "startAddress": "0x8010a958",
+        "endAddress": "0x8010ab36"
+      },
+      {
+        "FunctionName": "GUITextBox_ctor",
+        "startAddress": "0x8011851c",
+        "endAddress": "0x80118704"
+      },
+      {
+        "FunctionName": "GUILongLabel_ctor",
+        "startAddress": "0x8011d050",
+        "endAddress": "0x8011d1e8"
+      },
+      {
+        "FunctionName": "Patch_FileLoader",
+        "startAddress": "0x80128ff0",
+        "endAddress": "0x801292ec"
+      },
+      {
+        "FunctionName": "MCS_List_Create",
+        "startAddress": "0x8012bd3a",
+        "endAddress": "0x8012be5e"
+      },
+      {
+        "FunctionName": "MCS_List_Set",
+        "startAddress": "0x8012c09c",
+        "endAddress": "0x8012c154"
+      },
+      {
+        "FunctionName": "GUI_DisplayMessageBox",
+        "startAddress": "0x80147a10",
+        "endAddress": "0x80147a5a"
+      },
+      {
+        "FunctionName": "Patch_name",
+        "startAddress": "0x8091FED0",
+        "endAddress": "0x8091FEDB"
+      }
+    ]
+  }
+  
