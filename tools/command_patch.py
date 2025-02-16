@@ -16,6 +16,9 @@ def apply_patch(fw3070_data, patch_address, patch_data):
 		The modified firmware image data.
 	"""
 
+	if patch_address > 0x8000_0000:
+		patch_address -= 0x8000_0000
+
 	return fw3070_data[:patch_address] + patch_data + fw3070_data[(patch_address + len(patch_data)):]
 
 def apply_patchset(fw3070_data, patchset_dir):
@@ -33,6 +36,9 @@ def apply_patchset(fw3070_data, patchset_dir):
 		patchset_dir, 'metadata.json'
 	)
 
+	if not os.path.exists(patchset_metadata_path):
+		return fw3070_data
+	
 	with open(patchset_metadata_path, 'r') as f:
 		patchset_metadata = json.loads(f.read())
 
@@ -49,7 +55,7 @@ def apply_patchset(fw3070_data, patchset_dir):
 			patch_data = f.read()
 
 		patch_length = len(patch_data)
-		patch_address = int(patch['address'], 0)
+		patch_address = int(patch['address'], 16)
 
 		print(f'    Applying {patch_length} byte patch at {hex(patch_address)}')
 		fw3070_data = apply_patch(fw3070_data, patch_address, patch_data)

@@ -1,4 +1,21 @@
 {
     "isInMemory": true,
-    "addresses": []
+    "addresses": [],
+    "patches": [
+        {
+            "name": "file_loader",
+            "startAddress": "0x80128018",
+            "endAddress": "0x80128054"
+        },
+        {
+            "name": "marker",
+            "startAddress": "0x808FCC10", 
+            "endAddress": "0x808fcc1c"
+        },
+        {
+          "name": "backslash",
+          "startAddress": "0x806321C8",
+          "endAddress": "0x80632272"
+        }
+    ]
 }
