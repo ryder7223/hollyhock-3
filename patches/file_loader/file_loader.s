@@ -120,15 +120,15 @@ mov.l @r15+, r8
 
 .align 4
 open:
-	.long 0x80057854
+	.long 0x80058354
 fstat:
-	.long 0x8005798E
+	.long 0x8005848e
 read:
-	.long 0x800578A2
+	.long 0x800583a2
 close:
-	.long 0x80057912
+	.long 0x80058412
 PrintStandardErrorString:
-	.long 0x80065998
+	.long 0x8006658c
 
 buf:
 	.long 0x8CFE0000
@@ -156,13 +156,13 @@ file_path:
 
 .align 2
 setCursor:
-.long 0x8002E430
+.long 0x8002e418
 print:
-.long 0x8002DA0C
+.long 0x8002d9f4
 LCD_Refresh:
-.long 0x8003733E
+.long 0x800373ac
 waitkey:
-.long 0x80094380
+.long 0x8009521c
 reset:
 .long 0x80000000
 examPixelAddr:
@@ -174,7 +174,7 @@ line1:
 .string "You can not use the"
 .align 2
 line2:
-.string "hollyhock-2 launcher"
+.string "hollyhock-3 launcher"
 .align 2
 line3:
 .string "during exam mode!"

@@ -1,6 +1,70 @@
 import constants
 import gzip
 import hashlib
+import pefile
+from io import BytesIO
+import os
+
+def set_resource_rom(pe_file: str, recompressed_rom: bytes) -> None:
+	pe = pefile.PE(pe_file)
+	if hasattr(pe, 'DIRECTORY_ENTRY_RESOURCE'):
+		# Handle ROM resource (3070)
+		for resource_type in pe.DIRECTORY_ENTRY_RESOURCE.entries:
+			if pefile.RESOURCE_TYPE.get(resource_type.struct.Id, '-') == 'RT_RCDATA':
+				if hasattr(resource_type, 'directory'):
+					for resource_id in resource_type.directory.entries:
+						if hasattr(resource_id, 'directory'):
+							for resource_item in resource_id.directory.entries:
+								if resource_id.id == 3070:
+									ROM_offset = resource_item.data.struct.OffsetToData
+									ROM_size = resource_item.data.struct.Size
+									print(f"ROM @ {ROM_offset}:{ROM_size}")
+									
+									pe.set_bytes_at_rva(ROM_offset, recompressed_rom)
+									resource_item.data.struct.Size = len(recompressed_rom)
+
+		# Handle Bitmap resource (3046)
+		bitmap_path = os.path.join(os.path.dirname(pe_file), "Bitmap3046.bmp")
+		if os.path.exists(bitmap_path):
+			print(f"Found Bitmap3046.bmp, applying patch...")
+			with open(bitmap_path, 'rb') as f:
+				bitmap_data = f.read()
+
+			for resource_type in pe.DIRECTORY_ENTRY_RESOURCE.entries:
+				if pefile.RESOURCE_TYPE.get(resource_type.struct.Id, '-') == 'RT_BITMAP':
+					if hasattr(resource_type, 'directory'):
+						for resource_id in resource_type.directory.entries:
+							if hasattr(resource_id, 'directory'):
+								for resource_item in resource_id.directory.entries:
+									if resource_id.id == 3046:
+
+										bitmap_offset = resource_item.data.struct.OffsetToData
+										data_rva = bitmap_offset
+										offset = pe.get_offset_from_rva(bitmap_offset)
+										bitmap_size = resource_item.data.struct.Size
+										print(f'Directory entry at RVA{hex(data_rva)} of size {hex(bitmap_size)}')
+										
+										data = pe.get_memory_mapped_image()[data_rva:data_rva+bitmap_size]
+
+										# with open("data_3046.bin", "wb") as f:
+										# 	f.write(data)
+
+										bitmap_data = bitmap_data[14:] # truncate the 14 first bytes
+										new_size = len(bitmap_data)
+
+										if new_size != bitmap_size:
+											print(f"Size mismatch: New {new_size} vs Original {bitmap_size}. Aborting.")
+											break
+
+										print(f"Bitmap @ {hex(bitmap_offset)}:{hex(bitmap_size)}")										
+										pe.set_bytes_at_offset(offset, bitmap_data)
+										resource_item.data.struct.Size = new_size
+										print(f"Replaced bitmap resource {resource_id.id} at offset {hex(offset)}.")
+
+		pe.OPTIONAL_HEADER.CheckSum = pe.generate_checksum()
+		output_path = os.path.splitext(pe_file)[0] + "_patch.dll"
+		pe.write(output_path)
+		return output_path
 
 def go(args):
 	with open(args.dll_path, 'rb') as f:
@@ -43,5 +107,9 @@ def go(args):
 	print('Writing packed image...', flush=True)
 	with open(args.packed_fw3070_path, 'wb') as f:
 		f.write(fw3070c_data)
+
+	print('Creating patched DLL...', flush=True)
+	output_dll = set_resource_rom(args.dll_path, fw3070c_data)
+	print(f'Patched DLL saved as: {output_dll}')
 	print('Done!')
 

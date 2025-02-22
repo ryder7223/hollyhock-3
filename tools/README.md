@@ -8,3 +8,28 @@ python3 tools/hollyhock.py patch patches roms/v02.01.7002.0001/fw3070 roms/v02.0
 python3 tools/hollyhock.py pack roms/v02.01.7002.0001/hhk3070 roms/v02.01.7002.0001/ResData3070_patch.bin roms/v02.01.7002.0001/OSupdateDLL.dll
 
 ```
+
+## Patches
+
+```
+patches/
+├── metadata.json
+└── patch_name/
+    ├── metadata.json
+    └── patch_file.bin
+```
+
+First one is the `patch_metadata`
+```yaml
+patches_format_version: 1
+fw3070_checksum: <hash of the firmware>
+```
+
+Second one is a `patchset_metadata`
+```yaml
+name: name_of_patch
+patches: [
+    file: patch_file.bin
+    address: 0x8091FED0
+]
+```
