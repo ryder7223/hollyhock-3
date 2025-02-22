@@ -54,6 +54,18 @@
                 "roms/v02.01.7002.0001/3070Patch.bin",
                 "roms/v02.01.7002.0001/OSupdateDLL.dll"
             ]
+        }, {
+            "name": "AdrApp 2.1.7002",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "tools\\hollyhock.py",
+            "console": "integratedTerminal",
+            "args": [
+                "addresses",
+                "apply",
+                "versions/v02.01.7002.0001/addresses.json",
+                "sdk"
+            ]
         }
     ]
 }

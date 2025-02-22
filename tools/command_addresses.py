@@ -1,4 +1,5 @@
 from pathlib import Path
+import re
 
 
 # Extract the addresses from sdk folder(from the *.s File)
@@ -11,8 +12,8 @@ def find_all_addresses(folder):
                 _list.append(
                     {
                         'file': str(path),
-                        'FunctionName': line.split(" ")[1],
-                        'startAddress': line.split(" ")[2]
+                        'FunctionName': re.split(r"[\t ]+", line)[1],
+                        'startAddress': re.split(r"[\t ]+", line)[2]
                     }
                 )
     return _list
@@ -206,9 +207,9 @@ def apply_addresses(args):
     file_content = {}
     with open(args.addresses, 'r') as x:
         file_content = json.loads(''.join(x.readlines()))
-    if not file_content['isInMemory']:
-        print('The addresses file is not converted to inMemory')
-        return
+    # if not file_content['isInMemory']:
+    #     print('The addresses file is not converted to inMemory')
+    #     return
     apply_count = 0
     all_count = 0
     for x in find_all_addresses(args.directory):

@@ -307,6 +307,59 @@
       "endAddress": "0x80147a5a"
     },
     {
+      "FunctionName": "Serial_Open",
+      "startAddress": "0x80085fd6",
+      "endAddress": "0x8008607c"
+    },{
+      "FunctionName": "Serial_Close",
+      "startAddress": "0x8008607e",
+      "endAddress": "0x80086130"
+    },{
+      "FunctionName": "Serial_ReadSingle",
+      "startAddress": "0x80086132",
+      "endAddress": "0x8008616e"
+    },{
+      "FunctionName": "Serial_Read",
+      "startAddress": "0x80086176",
+      "endAddress": "0x8008623c"
+    },{
+      "FunctionName": "Serial_Peek",
+      "startAddress": "0x80085bba",
+      "endAddress": "0x80085bde"
+    },{
+      "FunctionName": "Serial_WriteSingle",
+      "startAddress": "0x80086286",
+      "endAddress": "0x800862ca"
+    },{
+      "FunctionName": "Serial_WriteUnbuffered",
+      "startAddress": "0x800862cc",
+      "endAddress": "0x80086306"
+    },{
+      "FunctionName": "Serial_Write",
+      "startAddress": "0x80086308",
+      "endAddress": "0x80086364"
+    },{
+      "FunctionName": "Serial_PollRX",
+      "startAddress": "0x80086366",
+      "endAddress": "0x80086378"
+    },{
+      "FunctionName": "Serial_PollTX",
+      "startAddress": "0x8008637a",
+      "endAddress": "0x8008638c"
+    },{
+      "FunctionName": "Serial_ClearRX",
+      "startAddress": "0x8008638e",
+      "endAddress": "0x800863b2"
+    },{
+      "FunctionName": "Serial_ClearTX",
+      "startAddress": "0x800863b4",
+      "endAddress": "0x800863d4"
+    },{
+      "FunctionName": "Serial_IsOpen",
+      "startAddress": "0x8008652e",
+      "endAddress": "0x8008653c"
+    },
+    {
       "FunctionName": "Patch_name",
       "startAddress": "0x8091FED0",
       "endAddress": "0x8091FEDB"
