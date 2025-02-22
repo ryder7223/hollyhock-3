@@ -35,8 +35,6 @@ jobs:
           sudo apt install pandoc doxygen graphviz sphinx-doc
       - name: Setup python
         uses: actions/setup-python@v5
-        with:
-          python-version: '3.13'
 
       - name: Build Doxygen
         run: |
