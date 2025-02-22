@@ -10,8 +10,9 @@ APP_VERSION("1.0.0")
 
 #define PIXEL(x, y) (vram[(x) + (y) * width])
 
-uint16_t *vram;
-int width, height;
+extern uint16_t *vram;
+extern int width, height;
+
 uint16_t lfsr;
 
 void drawCircle(int32_t x0, int32_t y0, int radius) {

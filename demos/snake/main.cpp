@@ -21,7 +21,7 @@ APP_VERSION("1.0.0")
 #define DIRECTION_SOUTH 2
 #define DIRECTION_WEST 3
 
-uint16_t *vram;
+extern uint16_t *vram;
 int lcdWidth, lcdHeight;
 int numBlocksX, numBlocksY;
 
