@@ -1,5 +1,6 @@
 .include "os/functions/_util.inc"
 
+
 DEFINE_OS_FUNC Debug_GetCursorPosition 0x8002e430
 DEFINE_OS_FUNC Debug_Printf 0x8002dbb0
 DEFINE_OS_FUNC Debug_PrintNumberHex_Byte 0x80095450

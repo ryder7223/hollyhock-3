@@ -1,5 +1,7 @@
 #pragma once
 
+#include "common.hpp"
+
 namespace Execs {
     struct ExecInfo {
         char fileName[9];
@@ -12,11 +14,9 @@ namespace Execs {
         unsigned char fp[4]; //this is the address of the first byte. A pointer throws an assembler error... This has to work.
     };
 
-    typedef void (*EntryPoint)();
-
     const int MAX_EXECS = 64;
 
-    extern struct ExecInfo g_execs[MAX_EXECS];
+    extern struct ExecInfo *g_execs;
     extern int g_numExecs;
 
     void LoadExecInfo();

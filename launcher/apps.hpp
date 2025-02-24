@@ -1,5 +1,7 @@
 #pragma once
 
+#include "common.hpp"
+
 namespace Apps {
     struct AppInfo {
         char fileName[100];
@@ -10,11 +12,9 @@ namespace Apps {
         char version[100];
     };
 
-    typedef void (*EntryPoint)();
-
     const int MAX_APPS = 64;
 
-    extern struct AppInfo g_apps[MAX_APPS];
+    extern struct AppInfo *g_apps;
     extern int g_numApps;
 
     void LoadAppInfo();
