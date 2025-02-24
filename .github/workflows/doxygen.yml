@@ -32,11 +32,10 @@ jobs:
         uses: actions/checkout@v4
       - name: Install pandoc and doxygen
         run: |
+          sudo apt update
           sudo apt install pandoc doxygen graphviz sphinx-doc
       - name: Setup python
         uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
 
       - name: Build Doxygen
         run: |

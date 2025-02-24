@@ -1,4 +1,4 @@
-ADDR:=80128018
+ADDR:=80128ff0
 
 AS:=sh4aeb-elf-gcc
 AS_FLAGS:=
