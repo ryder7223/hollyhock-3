@@ -4,6 +4,9 @@
 #include <sdk/os/lcd.hpp>
 
 APP_NAME("Demo GUI")
+APP_DESCRIPTION("Demonstrates the use of the GUI system.")
+APP_AUTHOR("unknown")
+APP_VERSION("1.0.0")
 
 class MyDialog : public GUIDialog {
 public:

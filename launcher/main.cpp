@@ -5,6 +5,7 @@
 #include <sdk/os/string.hpp>
 #include "apps.hpp"
 #include "bins.hpp"
+#include "common.hpp"
 #include "execs.hpp"
 
 class Launcher : public GUIDialog {
@@ -315,28 +316,28 @@ private:
 
 void main() {
     Launcher launcher;
-    if (launcher.ShowDialog() == GUIDialog::DialogResultOK) {
+    GUIDialog::DialogResult res = launcher.ShowDialog();
+    EntryPoint ep = nullptr;
+    if (res == GUIDialog::DialogResultOK) {
         if (launcher.m_selectedProg >= Apps::g_numApps+Bins::g_numApps){
 	        //Exec selected
-			Execs::EntryPoint epE = Execs::RunExec(launcher.m_selectedProg-Apps::g_numApps-Bins::g_numApps);
-			if (epE != nullptr) {
-				epE();
-			}
+			ep = Execs::RunExec(launcher.m_selectedProg-Apps::g_numApps-Bins::g_numApps);
 		}
 		else if (launcher.m_selectedProg >= Apps::g_numApps){
 	        //Bin selected
-			Bins::EntryPoint epA = Bins::RunApp(launcher.m_selectedProg-Apps::g_numApps);
-			if (epA != nullptr) {
-				epA();
-			}
+			ep = Bins::RunApp(launcher.m_selectedProg-Apps::g_numApps);
 		}
 
 		else{
 			//App selected
-			Apps::EntryPoint epA = Apps::RunApp(launcher.m_selectedProg);
-			if (epA != nullptr) {
-				epA();
-			}
+			ep = Apps::RunApp(launcher.m_selectedProg);
 		}
     }
+    Mem_Free(Apps::g_apps);
+    Mem_Free(Bins::g_apps);
+    Mem_Free(Execs::g_execs);
+    Debug_Printf(0, 0, false, 0, "Loaded at %p", ep);
+    LCD_Refresh();
+    Debug_WaitKey();
+    if (ep != nullptr) ep();
 }

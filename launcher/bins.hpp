@@ -1,5 +1,7 @@
 #pragma once
 
+#include "common.hpp"
+
 namespace Bins {
     struct AppInfo {
         char fileName[100];
@@ -9,8 +11,6 @@ namespace Bins {
         char author[100];
         char version[100];
     };
-
-    typedef void (*EntryPoint)();
 
     const int MAX_APPS = 64;
 
