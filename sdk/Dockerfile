@@ -9,6 +9,6 @@ COPY --from=build /sdk /sdk
 
 ENV SDK_DIR=/sdk
 
-LABEL org.opencontainers.image.source=https://github.com/QBos07/hollyhock-3
+LABEL org.opencontainers.image.source=https://github.com/ClasspadDev/hollyhock-3
 LABEL org.opencontainers.image.authors="qubos@outlook.de"
 LABEL org.opencontainers.image.vendor="QBos07"
