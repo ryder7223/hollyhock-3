@@ -1,5 +1,6 @@
 {
   "isInMemory": false,
+  "safeGuard": "2023.0209.1500",
   "addresses": [
     {
       "FunctionName": "LCD_VRAMBackup",
@@ -67,72 +68,72 @@
       "endAddress": "0x80039f16"
     },
     {
-      "FunctionName": "mkdir",
+      "FunctionName": "File_Mkdir",
       "startAddress": "0x80058314",
       "endAddress": "0x80058352"
     },
     {
-      "FunctionName": "open",
+      "FunctionName": "File_Open",
       "startAddress": "0x80058354",
       "endAddress": "0x800583a0"
     },
     {
-      "FunctionName": "read",
+      "FunctionName": "File_Read",
       "startAddress": "0x800583a2",
       "endAddress": "0x800583d8"
     },
     {
-      "FunctionName": "write",
+      "FunctionName": "File_Write",
       "startAddress": "0x800583da",
       "endAddress": "0x80058410"
     },
     {
-      "FunctionName": "close",
+      "FunctionName": "File_Close",
       "startAddress": "0x80058412",
       "endAddress": "0x8005844c"
     },
     {
-      "FunctionName": "remove",
+      "FunctionName": "File_Remove",
       "startAddress": "0x8005844e",
       "endAddress": "0x8005848c"
     },
     {
-      "FunctionName": "fstat",
+      "FunctionName": "File_Fstat",
       "startAddress": "0x8005848e",
       "endAddress": "0x800584c0"
     },
     {
-      "FunctionName": "stat",
+      "FunctionName": "File_Stat",
       "startAddress": "0x800584c2",
       "endAddress": "0x80058504"
     },
     {
-      "FunctionName": "rename",
+      "FunctionName": "File_Rename",
       "startAddress": "0x80058506",
       "endAddress": "0x80058594"
     },
     {
-      "FunctionName": "lseek",
+      "FunctionName": "File_Lseek",
       "startAddress": "0x80058596",
       "endAddress": "0x800585d8"
     },
     {
-      "FunctionName": "getAddr",
+      "FunctionName": "File_GetAddr",
       "startAddress": "0x8005876a",
       "endAddress": "0x800587a4"
     },
     {
-      "FunctionName": "findFirst",
+      "FunctionName": "File_FindFirst",
       "startAddress": "0x8005adac",
       "endAddress": "0x8005b0ee"
     },
     {
-      "FunctionName": "findNext",
+      "FunctionName": "File_FindNext",
       "startAddress": "0x8005b0f0",
       "endAddress": "0x8005b3b8"
     },
     {
-      "FunctionName": "findClose",
+      "FunctionName": "File_FindClose",
       "startAddress": "0x8005b3ba",
       "endAddress": "0x8005b438"
     },
@@ -197,42 +198,42 @@
       "endAddress": "0x800954de"
     },
     {
-      "FunctionName": "free",
+      "FunctionName": "Mem_Free",
       "startAddress": "0x800a86ac",
       "endAddress": "0x800a873e"
     },
     {
-      "FunctionName": "memcpy",
+      "FunctionName": "Mem_Memcpy",
       "startAddress": "0x8000d6a8",
       "endAddress": "0x8000d6dc"
     },
     {
-      "FunctionName": "memset",
+      "FunctionName": "Mem_Memset",
       "startAddress": "0x800a8f70",
       "endAddress": "0x800a8ff4"
     },
     {
-      "FunctionName": "strcat",
+      "FunctionName": "String_Strcat",
       "startAddress": "0x800a9080",
       "endAddress": "0x800a90a4"
     },
     {
-      "FunctionName": "strchr",
+      "FunctionName": "String_Strchr",
       "startAddress": "0x800a90a8",
       "endAddress": "0x800a90be"
     },
     {
-      "FunctionName": "strcpy",
+      "FunctionName": "String_Strcpy",
       "startAddress": "0x8000d80c",
       "endAddress": "0x8000d812"
     },
     {
-      "FunctionName": "strlen",
+      "FunctionName": "String_Strlen",
       "startAddress": "0x800a90d8",
       "endAddress": "0x800a912a"
     },
     {
-      "FunctionName": "strcmp",
+      "FunctionName": "String_Strcmp",
       "startAddress": "0x800ac7b2",
       "endAddress": "0x800ac94a"
     },
@@ -242,7 +243,7 @@
       "endAddress": "0x800b894e"
     },
     {
-      "FunctionName": "malloc",
+      "FunctionName": "String_Malloc",
       "startAddress": "0x800d0ad8",
       "endAddress": "0x800d0b2e"
     },
