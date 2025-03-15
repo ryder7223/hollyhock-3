@@ -1,5 +1,6 @@
 {
   "isInMemory": false,
+  "safeGuard": "2023.0209.1500",
   "addresses": [
     {
       "FunctionName": "LCD_VRAMBackup",
