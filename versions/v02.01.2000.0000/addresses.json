@@ -53,72 +53,72 @@
       "endAddress": "0x8009442E"
     },
     {
-      "FunctionName": "close",
+      "FunctionName": "File_Close",
       "startAddress": "0x80057912",
       "endAddress": "0x8005794C"
     },
     {
-      "FunctionName": "findClose",
+      "FunctionName": "File_FindClose",
       "startAddress": "0x8005A8BA",
       "endAddress": "0x8005A938"
     },
     {
-      "FunctionName": "findNext",
+      "FunctionName": "File_FindNext",
       "startAddress": "0x8005A5F0",
       "endAddress": "0x8005A8B8"
     },
     {
-      "FunctionName": "findFirst",
+      "FunctionName": "File_FindFirst",
       "startAddress": "0x8005A2AC",
       "endAddress": "0x8005A5EE"
     },
     {
-      "FunctionName": "fstat",
+      "FunctionName": "File_Fstat",
       "startAddress": "0x8005798E",
       "endAddress": "0x800579C0"
     },
     {
-      "FunctionName": "getAddr",
+      "FunctionName": "File_GetAddr",
       "startAddress": "0x80057C6A",
       "endAddress": "0x80057CA4"
     },
     {
-      "FunctionName": "lseek",
+      "FunctionName": "File_Lseek",
       "startAddress": "0x80057A96",
       "endAddress": "0x80057AD8"
     },
     {
-      "FunctionName": "mkdir",
+      "FunctionName": "File_Mkdir",
       "startAddress": "0x80057814",
       "endAddress": "0x80057852"
     },
     {
-      "FunctionName": "open",
+      "FunctionName": "File_Open",
       "startAddress": "0x80057854",
       "endAddress": "0x800578A0"
     },
     {
-      "FunctionName": "read",
+      "FunctionName": "File_Read",
       "startAddress": "0x800578A2",
       "endAddress": "0x800578D8"
     },
     {
-      "FunctionName": "remove",
+      "FunctionName": "File_Remove",
       "startAddress": "0x8005794E",
       "endAddress": "0x8005798C"
     },
     {
-      "FunctionName": "rename",
+      "FunctionName": "File_Rename",
       "startAddress": "0x80057A06",
       "endAddress": "0x80057A94"
     },
     {
-      "FunctionName": "stat",
+      "FunctionName": "File_Stat",
       "startAddress": "0x800579C2",
       "endAddress": "0x80057A04"
     },
     {
-      "FunctionName": "write",
+      "FunctionName": "File_Write",
       "startAddress": "0x800578DA",
       "endAddress": "0x80057910"
     },
@@ -258,22 +258,22 @@
       "endAddress": "0x80076FFE"
     },
     {
-      "FunctionName": "free",
+      "FunctionName": "Mem_Free",
       "startAddress": "0x800A76FC",
       "endAddress": "0x800A778E"
     },
     {
-      "FunctionName": "malloc",
+      "FunctionName": "Mem_Malloc",
       "startAddress": "0x800CFB00",
       "endAddress": "0x800CFB56"
     },
     {
-      "FunctionName": "memcpy",
+      "FunctionName": "Mem_Memcpy",
       "startAddress": "0x800A78AC",
       "endAddress": "0x800A78E0"
     },
     {
-      "FunctionName": "memset",
+      "FunctionName": "Mem_Memset",
       "startAddress": "0x800A7FC0",
       "endAddress": "0x800A8044"
     },
@@ -343,27 +343,27 @@
       "endAddress": "0x8008588A"
     },
     {
-      "FunctionName": "strcat",
+      "FunctionName": "String_Strcat",
       "startAddress": "0x800A80D0",
       "endAddress": "0x800A80F4"
     },
     {
-      "FunctionName": "strchr",
+      "FunctionName": "String_Strchr",
       "startAddress": "0x800A80F8",
       "endAddress": "0x800A810E"
     },
     {
-      "FunctionName": "strcmp",
+      "FunctionName": "String_Strcmp",
       "startAddress": "0x800AB802",
       "endAddress": "0x800AB99A"
     },
     {
-      "FunctionName": "strcpy",
+      "FunctionName": "String_Strcpy",
       "startAddress": "0x800A811C",
       "endAddress": "0x800A8122"
     },
     {
-      "FunctionName": "strlen",
+      "FunctionName": "String_Strlen",
       "startAddress": "0x800A8128",
       "endAddress": "0x800A817A"
     }
