@@ -3,6 +3,11 @@
   "safeGuard": "2017.0512.1515",
   "addresses": [
     {
+      "FunctionName": "DEBUG_FONTBASE",
+      "startAddress": "0x8062F4C8",
+      "endAddress": "0x8063260A"
+    },
+    {
       "FunctionName": "Debug_GetCursorPosition",
       "startAddress": "0x8002E448",
       "endAddress": "0x8002E45A"
