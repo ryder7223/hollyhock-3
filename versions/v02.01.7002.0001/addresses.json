@@ -3,6 +3,11 @@
   "safeGuard": "2023.0209.1500",
   "addresses": [
     {
+      "FunctionName": "DEBUG_FONTBASE",
+      "startAddress": "0x80633F50",
+      "endAddress": "0x80030CF2"
+    },
+    {
       "FunctionName": "LCD_VRAMBackup",
       "startAddress": "0x8002d3e2",
       "endAddress": "0x8002d400"
