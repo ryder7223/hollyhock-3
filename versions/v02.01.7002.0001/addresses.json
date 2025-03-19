@@ -248,7 +248,7 @@
       "endAddress": "0x800b894e"
     },
     {
-      "FunctionName": "String_Malloc",
+      "FunctionName": "Mem_Malloc",
       "startAddress": "0x800d0ad8",
       "endAddress": "0x800d0b2e"
     },
