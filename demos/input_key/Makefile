@@ -34,6 +34,8 @@ elf: $(APP_ELF) Makefile
 hh3: $(APP_OUT) Makefile
 all: $(APP_ELF) $(APP_OUT) Makefile
 
+.DEFAULT_GOAL := all
+
 clean:
 	rm -f $(OBJECTS) $(APP_ELF) $(APP_ELF).map $(APP_OUT)
 
@@ -58,4 +60,4 @@ $(SDK_DIR)/libsdk.a:
 %.o: %.cpp
 	$(CXX) -c $< -o $@ $(CXX_FLAGS)
 
-.PHONY: bin elf all clean
+.PHONY: elf hh3 all clean
