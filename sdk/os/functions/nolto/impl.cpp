@@ -215,7 +215,7 @@ extern "C" bool relink_sdk(const std::uint8_t * const mapping, const std::size_t
     if (std::strncmp(new_safe_guard, safe_guard, safe_guard_size) != 0)
         return false;
 
-    auto ptr = mapping + std::strlen(safe_guard);
+    auto ptr = mapping + std::strlen(safe_guard) + 1;
 
     while (ptr < mapping + size) {
         const auto name = reinterpret_cast<const char *>(ptr);
