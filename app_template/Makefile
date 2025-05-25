@@ -5,9 +5,9 @@ $(error You need to define the SDK_DIR environment variable, and point it to the
 endif
 
 AS:=sh4a_nofpueb-elf-gcc
-AS_FLAGS:=-mrelax
+AS_FLAGS:=
 
-FUNCTION_FLAGS=-flto -ffat-lto-objects -ffunction-sections -fdata-sections -mrelax -O2 -gdwarf-5
+FUNCTION_FLAGS=-flto -ffat-lto-objects -ffunction-sections -fdata-sections -O2 -gdwarf-5
 
 CC:=sh4a_nofpueb-elf-gcc
 CC_FLAGS:=$(FUNCTION_FLAGS) -Wall -Wextra -I $(SDK_DIR)/include/

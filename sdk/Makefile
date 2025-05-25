@@ -1,7 +1,7 @@
 DOXYGEN=doxygen
 
 CC:=sh4a_nofpueb-elf-g++
-CC_FLAGS=-flto -ffat-lto-objects -ffunction-sections -fdata-sections -Wall -Wextra -Wno-prio-ctor-dtor -pedantic -Werror -pedantic-errors -std=c++20 -gdwarf-5 -Os -mrelax -I include/
+CC_FLAGS=-flto -ffat-lto-objects -ffunction-sections -fdata-sections -Wall -Wextra -Wno-prio-ctor-dtor -pedantic -Werror -pedantic-errors -std=c++20 -gdwarf-5 -Os -I include/
 
 AR:=sh4a_nofpueb-elf-ar
 AR_FLAGS:=src
