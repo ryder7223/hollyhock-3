@@ -27,7 +27,8 @@ enum Input_EventType {
 	EVENT_ACTBAR_ESC = 0x3009,
 	EVENT_ACTBAR_SETTINGS = 0x300A,
 	EVENT_TOUCH = 0x4000,
-	EVENT_TIMER = 0x0005
+	EVENT_TIMER = 0x0005,
+	EVENT_NONE = 0x0FFF
 };
 
 enum Input_KeyEventType {
@@ -219,7 +220,7 @@ struct __attribute__((packed)) Input_Event {
  * The @p event structure should be zeroed before calling @ref GetInput.
  *
  * @param[out] event The input event's data.
- * @param unknown1 An unknown value. The value @c 0xFFFFFFFF must be supplied.
+ * @param unknown1 An unknown value. The value @c 0xFFFFFFFF or @c 0 must be supplied meaning wait or do not wait for a event.
  * @param unknown2 An unknown value. The value @c 0x10 must be supplied.
  * @return Always returns 0.
  */
