@@ -99,7 +99,7 @@ def convert_to_memory_address(json_file, memory_size='0x80000000'):
 def get_search_binary_data(address_file, firmware_image):
     import json
     file_content = {}
-    with open(address_file, 'r') as x:
+    with open(address_file, 'r', encoding="utf-8") as x:
         file_content = json.loads(''.join(x.readlines()))
     if file_content['isInMemory']:
         print("The address file is in inMemory Mode")
@@ -110,6 +110,11 @@ def get_search_binary_data(address_file, firmware_image):
         with open(firmware_image, 'rb') as y:
             y.seek(int(x['startAddress'], 16), 1)
             data['FunctionName'] = x['FunctionName']
+            size = int(x['endAddress'], 16) - int(x['startAddress'], 16)
+            if size <= 0:
+                print(f"Invalid size for {data['FunctionName']}")
+                continue
+            
             data['binary'] = y.read(int(x['endAddress'], 16) - int(x['startAddress'], 16))
         result.append(data)
     return result
@@ -119,7 +124,7 @@ def get_search_binary_data(address_file, firmware_image):
 def extract_addresses_from_binary_firmware(firmware_file, binary_search_data, address_file):
     import json
     file_content = {}
-    with open(address_file, 'r') as x:
+    with open(address_file, 'r', encoding="utf-8") as x:
         file_content = json.loads(''.join(x.readlines()))
 
     firmware = b''

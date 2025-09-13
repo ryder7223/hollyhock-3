@@ -38,6 +38,11 @@ patches: [
 ]
 ```
 
+## Search address
+
+`python tools/hollyhock.py addresses search roms\v02.01.7002.0001\fw3070 versions\v02.01.7002.0001\addresses.json roms\v02.01.9001\fw3070`
+
+
 ## Migrates address
 
 > ⚠️ This is a one-time action that will change all the sdk. Proceed with caution !
