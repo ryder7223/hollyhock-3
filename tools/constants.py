@@ -36,9 +36,31 @@ VERSION_SPECIFIC_INFO = {
 		'missing_byte_3069_offset': 0x2E57, # ABS changed
 		'missing_byte_3070_offset': 0x2E55
 	},
+	# Critor gonna love it
+	# '3.10.2000.0': {
+	# 	'OSupdateDLL_checksum': '4AF17E59EBCD5ED50C8363C9258D07ABCB6420CCB96232A2A34AED132ED666FE',
+	# 	'missing_byte_3069_offset': 0x377D,
+	# 	'missing_byte_3070_offset': 0x20E7,
+	# 	'missing_byte_offset': 0x3000
+	# },
+	'3.10.4000.0': {
+		'OSupdateDLL_checksum': '9B1E46ADD718E7515A6C2312DB572CBAE063C63BF2AAA68767231750BE0300F8',
+		'missing_byte_3069_offset': 0x2D04,
+		'missing_byte_3070_offset': 0x2B99
+	},
+	'3.10.5000.0': {
+		'OSupdateDLL_checksum': '2FC7AD5759D626DB399E61F6A1543D9DF00D89626A65DDFBB403510D8864D0C8',
+		'missing_byte_3069_offset': 0x2D04,
+		'missing_byte_3070_offset': 0x2E21
+	},
+	'3.10.6000.0': {
+		'OSupdateDLL_checksum': '61D2D881817C562125A98AF577549918212AB2C1C24209C57EADF3463BAF37D3',
+		'missing_byte_3069_offset': 0x2D04,
+		'missing_byte_3070_offset': 0x2E21
+	},
 	'3.10.7000.0': {
 		'OSupdateDLL_checksum': '3D45ED7A0665093CD83D07909675FC0E84A7BF124701EAE3DED3BD5B82CC8B14',
-		'missing_byte_3069_offset': 0x2D04, # Critor gonna love it
+		'missing_byte_3069_offset': 0x2D04, 
 		'missing_byte_3070_offset': 0x2B99
 	}
 }
