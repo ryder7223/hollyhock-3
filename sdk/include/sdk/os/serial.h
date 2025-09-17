@@ -90,7 +90,7 @@ extern int (*Serial_Read)(unsigned char *out, int sz, short *count) wo(1, 2) wo(
 
 extern int (*Serial_ReadSingle)(unsigned char *out) wo(1);
 
-extern int (*Serial_Peek)(int idx, unsigned char *out) wo(1);
+extern int (*Serial_Peek)(int idx, unsigned char *out) wo(2);
 
 extern int (*Serial_PollRX)(void);
 
