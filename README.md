@@ -10,6 +10,8 @@ My intention was to modify it a little. I changed the following things:
              Was changed to "hollyhock" by The6P4C, I changed it to "hollyhock-2".
 - Backslash: I will change the backslash character from the symbol `¥` to the symbol `\`.
 
+> **Note:** Version 3 is currently an open beta available on our Discord server. Check it out now if you're using ABS2022 !
+
 # DISCLAIMER
 - I AM NOT RESPONSIBLE FOR ANY DAMAGE YOU MAY DO TO YOUR CALCULATOR (fx-CP400, fx-CP400+E, fx-CG500 or whatever other model).  
 - I AM NOT LIABLE IF YOU BRICK OR OTHERWISE DAMAGE YOUR CALCULATOR.  
