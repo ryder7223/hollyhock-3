@@ -36,6 +36,11 @@ VERSION_SPECIFIC_INFO = {
 		'missing_byte_3069_offset': 0x2E57, # ABS changed
 		'missing_byte_3070_offset': 0x2E55
 	},
+	'v02.01.7003.0000': {
+		'OSupdateDLL_checksum': '642C589EE75CF5277061426B8B7A7D78C086B2AC5A4136195120F03F3A572D36',
+		'missing_byte_3069_offset': 0x2E6D,
+		'missing_byte_3070_offset': 0x3335
+	},
 	# Critor gonna love it
 	# '3.10.2000.0': {
 	# 	'OSupdateDLL_checksum': '4AF17E59EBCD5ED50C8363C9258D07ABCB6420CCB96232A2A34AED132ED666FE',
