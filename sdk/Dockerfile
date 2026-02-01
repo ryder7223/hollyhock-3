@@ -1,9 +1,9 @@
 # syntax=docker/dockerfile:1
-FROM --platform=$BUILDPLATFORM ghcr.io/qbos07/cp-dockercross:v1.3.1 AS build
+FROM --platform=$BUILDPLATFORM ghcr.io/qbos07/cp-dockercross:v1.3.2 AS build
 
 RUN --mount=type=bind,source=.,rw make -j && mkdir -p /sdk && cp -Pr libsdk.a include/ /sdk
 
-FROM ghcr.io/qbos07/cp-dockercross:v1.3.1
+FROM ghcr.io/qbos07/cp-dockercross:v1.3.2
 
 COPY --from=build /sdk /sdk
 
