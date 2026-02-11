@@ -3,6 +3,26 @@
   "safeGuard": "2017.0512.1515",
   "addresses": [
     {
+      "FunctionName": "_kernel_reset",
+      "startAddress": "0x800220f8",
+      "endAddress": "0x8002223c"
+    },
+    {
+      "FunctionName": "_kernel_sysmt",
+      "startAddress": "0x8062f0ec",
+      "endAddress": "0x8062f2b6"
+    },
+    {
+      "FunctionName": "_kernel_cnfgtbl",
+      "startAddress": "0x8062e514",
+      "endAddress": "0x8062e868"
+    },
+    {
+      "FunctionName": "Battery_GetVoltage",
+      "startAddress": "0x8002a62c",
+      "endAddress": "0x8002a6ae"
+    },
+    {
       "FunctionName": "DEBUG_FONTBASE",
       "startAddress": "0x8062F4C8",
       "endAddress": "0x8063260A"
@@ -296,6 +316,16 @@
       "FunctionName": "Mem_Memset",
       "startAddress": "0x800A7FC0",
       "endAddress": "0x800A8044"
+    },
+    {
+      "FunctionName": "Mem_Sbrk",
+      "startAddress": "0x800cdec6",
+      "endAddress": "0x800cdeea"
+    },
+    {
+      "FunctionName": "Mem_SbrkMode",
+      "startAddress": "0x800aedf6",
+      "endAddress": "0x800aee08"
     },
     {
       "FunctionName": "Serial_Open",

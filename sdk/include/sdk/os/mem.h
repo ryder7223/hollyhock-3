@@ -19,7 +19,7 @@ extern "C" {
 #include <stddef.h>
 
 /**
- * Frees memory allocated by @ref malloc, allowing it to be reused.
+ * Frees memory allocated by @ref Mem_Malloc, allowing it to be reused.
  * 
  * @param ptr The pointer to the allocated region of memory to free.
  */
@@ -30,7 +30,7 @@ extern void *(*_FP_Mem_Malloc)(size_t size) __asm__ (UCONCAT("Mem_Malloc")) __at
 /**
  * Allocates @p size bytes of memory.
  *
- * The current application crashes if the memory cannot be allocated.
+ * Invokes @ref Mem_Sbrk to enlarge the heap is necessary.
  *
  * @param size The number of bytes of memory to allocate.
  * @return A pointer to the allocated memory region.
@@ -74,6 +74,26 @@ extern void *(*Mem_Memset)(void *ptr, int value, size_t num)
 __attribute__((access(write_only, 1, 3)))
 #endif
 ;
+
+/**
+ * Changes the heap boundary by @p size bytes.
+ *
+ * Be sure of what you are doing!
+ *
+ * @param size The number of bytes to change the heap boundary.
+ * @return A pointer to the new heap boundary. Or -1 if OOM
+ */
+extern void *(*Mem_Sbrk)(long size);
+
+/**
+ * Changes what happens in a OOM situation.
+ *
+ * If 0, display a OOM message. If 1 @ref Mem_Sbrk returns -1.
+ *
+ * @param newMode The new mode or -1 to just query.
+ * @return The old mode.
+ */
+extern signed char (*Mem_SbrkMode)(signed char newMode);
 
 #ifdef __cplusplus
 }

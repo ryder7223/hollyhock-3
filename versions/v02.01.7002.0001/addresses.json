@@ -3,6 +3,26 @@
   "safeGuard": "2023.0209.1500",
   "addresses": [
     {
+      "FunctionName": "_kernel_reset",
+      "startAddress": "0x800220e0",
+      "endAddress": "0x80022224"
+    },
+    {
+      "FunctionName": "_kernel_sysmt",
+      "startAddress": "0x80633b74",
+      "endAddress": "0x80633d40"
+    },
+    {
+      "FunctionName": "_kernel_cnfgtbl",
+      "startAddress": "0x80632f9c",
+      "endAddress": "0x806332f0"
+    },
+    {
+      "FunctionName": "Battery_GetVoltage",
+      "startAddress": "0x8002a614",
+      "endAddress": "0x8002a696"
+    },
+    {
       "FunctionName": "DEBUG_FONTBASE",
       "startAddress": "0x80633F50",
       "endAddress": "0x80030CF2"
@@ -231,6 +251,16 @@
       "FunctionName": "Mem_Memset",
       "startAddress": "0x800a8f70",
       "endAddress": "0x800a8ff4"
+    },
+    {
+      "FunctionName": "Mem_Sbrk",
+      "startAddress": "0x800cee9e",
+      "endAddress": "0x800ceec2"
+    },
+    {
+      "FunctionName": "Mem_SbrkMode",
+      "startAddress": "0x800afdc6",
+      "endAddress": "0x800afdd8"
     },
     {
       "FunctionName": "String_Strcat",

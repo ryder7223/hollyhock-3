@@ -81,6 +81,8 @@ REGISTER_SYMBOL(Mem_Free)
 REGISTER_SYMBOL(Mem_Malloc)
 REGISTER_SYMBOL(Mem_Memcpy)
 REGISTER_SYMBOL(Mem_Memset)
+REGISTER_SYMBOL(Mem_Sbrk)
+REGISTER_SYMBOL(Mem_SbrkMode)
 
 // serial
 REGISTER_SYMBOL(Serial_Open)
@@ -103,6 +105,14 @@ REGISTER_SYMBOL(String_Strchr)
 REGISTER_SYMBOL(String_Strcmp)
 REGISTER_SYMBOL(String_Strcpy)
 REGISTER_SYMBOL(String_Strlen)
+
+// kernel
+REGISTER_SYMBOL(_kernel_reset)
+REGISTER_SYMBOL(_kernel_cnfgtbl)
+REGISTER_SYMBOL(_kernel_sysmt)
+
+// misc
+REGISTER_SYMBOL(Battery_GetVoltage)
 
 
 static symbol_entry * const symbols[] {
@@ -176,6 +186,8 @@ static symbol_entry * const symbols[] {
     &Mem_Malloc,
     &Mem_Memcpy,
     &Mem_Memset,
+    &Mem_Sbrk,
+    &Mem_SbrkMode,
 
     // serial
     &Serial_Open,
@@ -198,6 +210,14 @@ static symbol_entry * const symbols[] {
     &String_Strcmp,
     &String_Strcpy,
     &String_Strlen,
+
+    // kernel
+    &_kernel_reset,
+    &_kernel_cnfgtbl,
+    &_kernel_sysmt,
+
+    // misc
+    &Battery_GetVoltage,
 };
 
 static const auto safe_guard = reinterpret_cast<const char *>(0x814fffe0);
