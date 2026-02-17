@@ -18,7 +18,7 @@ extern "C" {
  * 
  * @return The voltage in cV.
  */
-extern int (*Battery_GetVolatage)();
+extern int (*Battery_GetVoltage)();
 
 #ifdef __cplusplus
 }
