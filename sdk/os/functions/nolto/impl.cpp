@@ -77,6 +77,7 @@ REGISTER_SYMBOL(MCS_List_Set)
 REGISTER_SYMBOL(MCS_SetVariable)
 
 // mem
+REGISTER_SYMBOL(free_list_head)
 REGISTER_SYMBOL(Mem_Free)
 REGISTER_SYMBOL(Mem_Malloc)
 REGISTER_SYMBOL(Mem_Memcpy)
@@ -182,6 +183,7 @@ static symbol_entry * const symbols[] {
     &MCS_SetVariable,
 
     // mem
+    &free_list_head,
     &Mem_Free,
     &Mem_Malloc,
     &Mem_Memcpy,

@@ -78,6 +78,11 @@
       "endAddress": "0x8009442E"
     },
     {
+      "FunctionName": "free_list_head",
+      "startAddress": "0x8c1a35f0",
+      "endAddress": "0x0x8c1a35f2"
+    },
+    {
       "FunctionName": "File_Close",
       "startAddress": "0x80057fa2",
       "endAddress": "0x80057fc6"

@@ -18,6 +18,21 @@ extern "C" {
 #include <stdint.h>
 #include <stddef.h>
 
+struct Mem_FreeListBlock {
+    size_t size;
+    struct Mem_FreeListBlock *next;
+};
+
+static void * const heap_start = (void *)0x8c280000;
+static const
+#ifdef __cplusplus
+constexpr
+#endif
+size_t heap_size = 12 * 1024 * 1024; // 12MB
+static void * const heap_end = (void *)0x8ce80000;
+
+extern struct Mem_FreeListBlock ** const free_list_head;
+
 /**
  * Frees memory allocated by @ref Mem_Malloc, allowing it to be reused.
  * 

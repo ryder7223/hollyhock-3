@@ -103,6 +103,11 @@
       "endAddress": "0x80038a98"
     },
     {
+      "FunctionName": "free_list_head",
+      "startAddress": "0x8c1a35f0",
+      "endAddress": "0x0x8c1a35f2"
+    },
+    {
       "FunctionName": "File_Mkdir",
       "startAddress": "0x800589f6",
       "endAddress": "0x80058a1a"
