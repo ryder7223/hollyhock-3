@@ -3,7 +3,7 @@ If you want to install gcc for sh4, look [here](https://github.com/TheRainbowPho
 ---
 
 # Patching the fx-CP400 firmware
-**You do not need to do this by hand if you just want to install programs on ypur calculator! Just use the program Snail2021.exe which is available in the releases.**
+**You do not need to do this by hand if you just want to install programs on your calculator! Just use the program Snail2021.exe which is available in the releases.**
 
 Simple instructions if you just want to install it: https://github.com/SnailMath/hollyhock-2#installation-simple 
 
